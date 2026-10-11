@@ -1,0 +1,204 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="MK_StyleSheet.css">
+
+<title>Portfolio</title>
+
+</head>
+
+
+<body>
+
+<!-- *********** Navigation Bar Begins *************** -->
+
+<nav>
+    <ul class="nav-links nav-left">
+        <li>
+            <a href="MKPortfolio.html">Home</a>
+        </li>
+        <li>
+            <a href="portfolio.html">Portfolio</a>
+        </li>
+        <li>
+            <a href="projects.html">Projects</a>
+        </li>
+    </ul>
+	
+    <div class="logo">
+        <a href="MKPortfolio.html">
+            <img  src="Images/NavLogo.png" alt="MK Studio Logo">
+        </a>
+    </div>
+
+    <ul class="nav-links nav-right">
+        <li>
+            <a href="about.html">About</a>
+        </li>
+        <li>
+            <a href="terms.html">Terms of Service</a>
+        </li>
+        <li>
+            <a href="contact.html">Contact</a>
+        </li>
+    </ul>
+</nav>
+
+<!-- *********** Navigation Bar Ends *************** -->
+<main>
+    <section>
+        <div class="gallery">
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="Images/project1.png" alt="Project One">
+                <div class="gallery-overlay">
+                    <h3>
+                        Project One
+                    </h3>
+                </div>
+            </div>
+			
+            <div class="gallery-item" onclick="openModal(this)" data-video="Video/EveryLivingMemory.mp4">
+                <img src="Images/EveryLivingMoment.png" alt="Every Living Memory">
+                <div class="gallery-overlay">
+                    <h3>
+                        Every Living Memory (Blender, Meta Quest)
+                    </h3>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="Images/project3.png" alt="Project Three">
+                <div class="gallery-overlay">
+                    <h3>
+                        Project Three
+                    </h3>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openModal(this)">
+
+                <img src="Images/project4.png" alt="Project Four">
+                <div class="gallery-overlay">
+                    <h3>
+                        Project Four
+                    </h3>
+                </div>
+            </div>
+
+		<div class="gallery-item" onclick="openModal(this)">
+
+			<img src="Images/project5.png" alt="Project Five">
+			<div class="gallery-overlay">
+				<h3>
+					Project Five
+				</h3>
+			</div>
+		</div>
+				</div>
+
+
+<!-- =========================================MODAL========================================= -->
+        <div id="image-modal" class="image-modal" onclick="closeModal(event)">
+
+            <!-- CLOSE BUTTON -->
+            <span class="modal-close" onclick="closeModal(event)">
+                &times;
+            </span>
+
+            <!-- IMAGE FOR NORMAL IMAGE PROJECTS -->
+            <img id="expanded-image" class="expanded-image" src="#" alt="">
+
+            <!-- VIDEO FOR EVERY LIVING MEMORY -->
+            <video id="expanded-video" class="expanded-video" controls>
+                <source id="expanded-video-source" src="#" type="video/mp4">
+            </video>
+        </div>
+    </section>
+</main>
+
+
+<!-- =========================================JAVASCRIPT ========================================= -->
+
+<script>
+function openModal(item) {
+    const modal =
+        document.getElementById("image-modal");
+    const expandedImage =
+        document.getElementById("expanded-image");
+    const expandedVideo =
+        document.getElementById("expanded-video");
+    const videoSource =
+        document.getElementById("expanded-video-source");
+    const videoPath =
+        item.getAttribute("data-video");
+
+    /* =====================================VIDEO PROJECT===================================== */
+
+    if (videoPath) {
+        expandedImage.style.display = "none";
+        videoSource.src = videoPath;
+        expandedVideo.load();
+        expandedVideo.style.display = "block";
+        expandedVideo.play();
+    }
+
+
+    /* =====================================IMAGE PROJECT===================================== */
+    else {
+        const image = item.querySelector("img");
+        expandedImage.src = image.src;
+        expandedImage.alt = image.alt;
+        expandedImage.style.display = "block";
+        expandedVideo.style.display = "none";
+        expandedVideo.pause();
+    }
+
+    modal.style.display = "flex";
+}
+
+
+/* =========================================
+   CLOSE MODAL
+   ========================================= */
+
+function closeModal(event) {
+    const modal =
+        document.getElementById("image-modal");
+    const expandedVideo =
+        document.getElementById("expanded-video");
+
+    if (
+        event.target === modal ||
+        event.target.classList.contains("modal-close")
+    ) 
+	{
+		expandedVideo.pause();
+        modal.style.display = "none";
+
+    }
+
+}
+
+
+/* =========================================ESC KEY CLOSES MODAL========================================= */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+        if (event.key === "Escape") {
+            const modal =
+                document.getElementById("image-modal");
+            const expandedVideo =
+                document.getElementById("expanded-video");
+            expandedVideo.pause();
+            modal.style.display = "none";
+        }
+
+    }
+);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<link rel="StyleSheet" href="MK_StyleSheet.css">
+<title>Portfolio</title>
+</head>
+
+<body>
+<!/* ***********Navigation Bar Begins*************** */!>
+	<nav>
+    	<ul class="nav-links nav-left">
+        	<li><a href="MKPortfolio.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="projects.html">Projects</a></li>
+    	</ul>
+    	<div class="logo">
+        	<a href="MKPortfolio.html">
+            	<img src="Images/NavLogo.png" alt="MK Studio Logo">
+        	</a>
+    	</div>
+    	<ul class="nav-links nav-right">
+        	<li><a href="about.html">About</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+        	<li><a href="contact.html">Contact</a></li>
+    	</ul>
+
+	</nav>
+<!/* ***********Navigation Bar Ends*************** */!>
+	
+<main>
+		<section>
+			<div class="gallery">
+				<div class="gallery-item" onclick="openModal(this)">
+					<img src="Images/project1.png" alt="Project One">
+					<div class="gallery-overlay">
+						<h3>Project One</h3>
+					</div>
+				</div>
+
+				<div class="gallery-item" onclick="openModal(this)">
+					<img src="Images/project2.png" alt="Project Two">
+					<div class="gallery-overlay">
+						<h3>Project Two</h3>
+					</div>
+				</div>
+
+				<div class="gallery-item" onclick="openModal(this)">
+					<img src="Images/project3.png" alt="Project Three">
+					<div class="gallery-overlay">
+						<h3>Project Three</h3>
+					</div>
+				</div>
+
+				<div class="gallery-item" onclick="openModal(this)">
+					<img src="Images/project4.png" alt="Project Four">
+					<div class="gallery-overlay">
+						<h3>Project Four</h3>
+					</div>
+				</div>
+			</div>
+			<div id="image-modal" class="image-modal" onclick="closeModal()">
+
+				<span class="modal-close">&times;</span>
+
+				<img id="expanded-image" class="expanded-image" src="#" alt="#">
+
+			</div>
+		</section>
+</main>
+<script>
+	function openModal(item) {
+
+		const image = item.querySelector("img");
+
+		const modal = document.getElementById("image-modal");
+
+		const expandedImage = document.getElementById("expanded-image");
+
+		expandedImage.src = image.src;
+		expandedImage.alt = image.alt;
+
+		modal.style.display = "flex";
+	}
+
+
+	function closeModal() {
+
+		document.getElementById("image-modal").style.display = "none";
+
+	}
+</script>
+</body>
+</html>

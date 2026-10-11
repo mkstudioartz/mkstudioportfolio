@@ -1,0 +1,236 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<link rel="StyleSheet" href="MK_StyleSheet.css">
+<title>MK Studio Official</title>
+</head>
+
+<body>
+<! ***********Navigation Bar Begins*************** !>
+	<nav>
+    	<ul class="nav-links nav-left">
+        	<li><a href="MKPortfolio.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="projects.html">Projects</a></li>
+    	</ul>
+    	<div class="logo">
+        	<a href="MKPortfolio.html">
+            	<img src="Images/NavLogo.png" alt="MK Studio Logo">
+        	</a>
+    	</div>
+    	<ul class="nav-links nav-right">
+        	<li><a href="about.html">About</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+        	<li><a href="contact.html">Contact</a></li>
+    	</ul>
+
+	</nav>
+<!***********Navigation Bar Ends*************** !>
+	
+<!***********Parallax Intro Begins***************!>
+	<header>
+		<div class="container">
+			<img src="Background2.png" alt="" id="three">
+			<img src="midground2.png" alt="" id="two">
+			<img src="Forground2.png" alt="" id="one">
+		</div>
+		
+		<div class="set-sail">
+		<div class="set-sail-buttons">
+			<a href="YOUR_REEL_LINK" class="sail-btn sail-btn--primary" target="_blank" rel="noopener">Watch My Reel</a>
+			<a href="YOUR_CV_LINK" class="sail-btn sail-btn--secondary" download>Download My CV</a>
+		</div>
+
+		<div class="social-row">
+			<a href="https://instagram.com/yourhandle" class="social-tile" target="_blank" rel="noopener" style="background-image: url('Images/instagram-icon.png');">
+				<span class="social-tile-overlay">Instagram</span>
+			</a>
+			<a href="https://facebook.com/yourhandle" class="social-tile" target="_blank" rel="noopener" style="background-image: url('Images/facebook-icon.png');">
+				<span class="social-tile-overlay">Facebook</span>
+			</a>
+			<a href="https://patreon.com/yourhandle" class="social-tile" target="_blank" rel="noopener" style="background-image: url('Images/patreon-icon.png');">
+				<span class="social-tile-overlay">Patreon</span>
+			</a>
+			<a href="https://youtube.com/yourhandle" class="social-tile" target="_blank" rel="noopener" style="background-image: url('Images/youtube-icon.png');">
+				<span class="social-tile-overlay">YouTube</span>
+			</a>
+		</div>
+	</div>
+	</header>
+	
+	<script>
+		const one = document.getElementById("one");
+		const two = document.getElementById("two");
+		const three = document.getElementById("three");
+		
+		document.addEventListener("scroll", () =>{
+			let value = window.scrollY;
+			two.style.bottom = -value*0.4 + "px";
+			three.style.bottom = -value*0.6 + "px";
+		})
+	</script>
+	
+<! ***********Parallax Intro Ends*************** !>	
+
+<! ***********Carousel Begins*************** !>	
+	<main>
+		<section>
+		<h1 class="section-title"> Recent Work</h1>
+		<div class="horizontal-line"></div>
+			
+<div class="illustration-carousel">
+
+    <!-- FIRST GROUP -->
+    <div class="illustration-group">
+
+        <a href="#" class="card">
+            <div class="card-content">1</div>
+            <div class="card-overlay">
+                <h3>Project One</h3>
+                <p>Learn More</p>
+            </div>
+        </a>
+
+        <a href="#" class="card">
+            <div class="card-content">2</div>
+            <div class="card-overlay">
+                <h3>Project Two</h3>
+                <p>Learn More</p>
+            </div>
+        </a>
+
+        <a href="#" class="card">
+            <div class="card-content">3</div>
+            <div class="card-overlay">
+                <h3>Project Three</h3>
+                <p>Learn More</p>
+            </div>
+        </a>
+
+        <a href="#" class="card">
+            <div class="card-content">4</div>
+            <div class="card-overlay">
+                <h3>Project Four</h3>
+                <p>Learn More</p>
+            </div>
+        </a>
+
+        <a href="#" class="card">
+            <div class="card-content">5</div>
+            <div class="card-overlay">
+                <h3>Project Five</h3>
+                <p>Learn More</p>
+            </div>
+        </a>
+
+        <a href="#" class="card">
+            <div class="card-content">6</div>
+            <div class="card-overlay">
+                <h3>Project Six</h3>
+                <p>Learn More</p>
+            </div>
+        </a>
+
+    </div>
+
+
+    <!-- DUPLICATE GROUP FOR INFINITE LOOP -->
+    <div class="illustration-group" aria-hidden="true">
+
+        <a href="#" class="card">
+            <div class="card-content">1</div>
+            <div class="card-overlay">
+                <h3>Project One</h3>
+                <p>Learn More</p>
+            </div>
+        </a>
+
+        <a href="#" class="card">
+            <div class="card-content">2</div>
+            <div class="card-overlay">
+                <h3>Project Two</h3>
+                <p>Learn More</p>
+            </div>
+        </a>
+
+        <a href="#" class="card">
+            <div class="card-content">3</div>
+            <div class="card-overlay">
+                <h3>Project Three</h3>
+                <p>Learn More</p>
+            </div>
+        </a>
+
+        <a href="#" class="card">
+            <div class="card-content">4</div>
+            <div class="card-overlay">
+                <h3>Project Four</h3>
+                <p>Learn More</p>
+            </div>
+        </a>
+
+        <a href="#" class="card">
+            <div class="card-content">5</div>
+            <div class="card-overlay">
+                <h3>Project Five</h3>
+                <p>Learn More</p>
+            </div>
+        </a>
+
+        <a href="#" class="card">
+            <div class="card-content">6</div>
+            <div class="card-overlay">
+                <h3>Project Six</h3>
+                <p>Learn More</p>
+            </div>
+        </a>
+
+    </div>
+
+</div>
+			
+<! ***********Carousel Ends*************** !>	
+			
+<! ***********MK Introductions*************** !>
+			
+<img src="Images/rope-line.png" alt="" class="rope-divider">
+		</section>
+		
+<section class="introduction-section">
+
+    <div class="introduction-text">
+
+        <p class="introduction-kicker">HELLO!</p>
+
+        <h2>
+            I’m MK, a storyteller, 3D artist,
+            and designer exploring animation,
+            culture, and immersive media.
+        </h2>
+
+        <p class="introduction-description">
+            My work combines storytelling, 3D animation, design,
+            and technology to create worlds and experiences that
+            connect people through art and narrative.
+        </p>
+
+        <a href="about.html" class="about-button">MORE ABOUT ME</a>
+
+    </div>
+
+
+    <div class="introduction-image-area">
+
+            <img src="Images/Muhammad_Headshot.jpg"
+                 alt="Portrait of MK">
+
+        </div>
+
+</section>
+ <div class="horizontal-line"></div>	
+	</main>
+<! ***********MK Introductions End*************** !>
+	
+</body>
+</html>

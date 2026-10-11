@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="MK_StyleSheet.css">
+
+    <title>Contact | MK Studio</title>
+</head>
+
+<body>
+/* ***********Navigation Bar Begins*************** */
+	<nav>
+    	<ul class="nav-links nav-left">
+        	<li><a href="MKPortfolio.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="projects.html">Projects</a></li>
+    	</ul>
+    	<div class="logo">
+        	<a href="MKPortfolio.html">
+            	<img src="Images/NavLogo.png" alt="MK Studio Logo">
+        	</a>
+    	</div>
+    	<ul class="nav-links nav-right">
+        	<li><a href="about.html">About</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+        	<li><a href="contact.html">Contact</a></li>
+    	</ul>
+
+	</nav>
+/* ***********Navigation Bar Ends*************** */
+
+
+    <main class="contact-page">
+
+    <section class="contact-section">
+
+        <div class="contact-heading">
+            <h1 class="section-title">LET'S SET SAIL<br>TOGETHER</h1>
+
+            <p>
+                Feel free to leave me a message via the form, or reach me at
+            </p>
+
+            <a href="mailto:yourname@email.com" class="contact-email">
+                mk.studio.artz@gmail.com
+            </a>
+
+            <p class="contact-tagline">
+                Let's create something new together.
+            </p>
+        </div>
+
+
+        <form class="contact-form">
+
+            <!-- ROW 1 -->
+            <div class="form-group">
+                <label for="name">Name*</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address*</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+
+            <!-- ROW 2 -->
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+
+            <div class="form-group">
+                <label for="subject">What's this regarding?*</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+
+
+            <!-- FULL WIDTH MESSAGE -->
+            <div class="form-group form-message">
+                <label for="message">Message*</label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="8"
+                    required></textarea>
+            </div>
+
+
+            <div class="form-submit">
+                <button type="submit">SUBMIT</button>
+            </div>
+
+        </form>
+
+    </section>
+
+</main>
+
+</body>
+
+</html>
