@@ -1,0 +1,330 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<link rel="StyleSheet" href="MK_StyleSheet.css">
+<title>MK Studio Official</title>
+</head>
+
+<body>
+<! ***********Navigation Bar Begins*************** !>
+	<nav>
+    	<ul class="nav-links nav-left">
+        	<li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="projects.html">Projects</a></li>
+    	</ul>
+    	<div class="logo">
+        	<a href="index.html">
+            	<img src="Images/NavLogo.png" alt="MK Studio Logo">
+        	</a>
+    	</div>
+    	<ul class="nav-links nav-right">
+        	<li><a href="about.html">About</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+        	<li><a href="contact.html">Contact</a></li>
+    	</ul>
+
+	</nav>
+<!***********Navigation Bar Ends*************** !>
+	
+<!***********Parallax Intro Begins***************!>
+	<header>
+		<div class="container">
+			<img src="Background2.png" alt="" id="three">
+			<img src="midground2.png" alt="" id="two">
+			<img src="Forground2.png" alt="" id="one">
+		</div>
+		
+		<div class="set-sail">
+		<div class="set-sail-buttons">
+			<a href="https://youtu.be/PUp2PWxzdMQ" class="sail-btn sail-btn--primary" target="_blank" rel="noopener">Watch My Reel</a>
+			<a href="https://acrobat.adobe.com/id/urn:aaid:sc:us:a8dde7c1-642e-4fb4-be08-1f800de0a50a" class="sail-btn sail-btn--secondary" download>Download My CV</a>
+		</div>
+
+		<div class="social-row">
+			<a href="https://instagram.com/mk.studio.artz" class="social-tile" target="_blank" rel="noopener" style="background-image: url('Images/instagram-icon.png');">
+				<span class="social-tile-overlay">Instagram</span>
+			</a>
+			<a href="https://www.facebook.com/MkStudios2003" class="social-tile" target="_blank" rel="noopener" style="background-image: url('Images/facebook-icon.png');">
+				<span class="social-tile-overlay">Facebook</span>
+			</a>
+			<a href="https://patreon.com/yourhandle" class="social-tile" target="_blank" rel="noopener" style="background-image: url('Images/patreon-icon.png');">
+				<span class="social-tile-overlay">Patreon</span>
+			</a>
+			<a href="https://www.youtube.com/@MKStudio-Artz" class="social-tile" target="_blank" rel="noopener" style="background-image: url('Images/youtube-icon.png');">
+				<span class="social-tile-overlay">YouTube</span>
+			</a>
+		</div>
+	</div>
+	</header>
+	
+	<script>
+		const one = document.getElementById("one");
+		const two = document.getElementById("two");
+		const three = document.getElementById("three");
+		
+		document.addEventListener("scroll", () =>{
+			let value = window.scrollY;
+			two.style.bottom = -value*0.4 + "px";
+			three.style.bottom = -value*0.6 + "px";
+		})
+	</script>
+	
+<! ***********Parallax Intro Ends*************** !>	
+
+
+<!-- *********** Carousel Begins *************** -->
+
+<main>
+    <section>
+
+        <h1 class="section-title">Recent Work</h1>
+        <div class="horizontal-line"></div>
+        <div class="illustration-carousel">
+
+ <!-- ==================================FIRST GROUP================================== -->
+
+            <div class="illustration-group">
+
+                <!-- PROJECT ONE -->
+                <a href="Hideout.html" class="card">
+					
+                    <div class="card-content">
+                        <img src="Images/HideoutPoster.png" alt="Hideout project preview">
+                    </div>
+
+                    <div class="card-overlay">
+                        <h3>The Hideout Short Film</h3>
+                        <p>Learn More</p>
+                    </div>
+
+                </a>
+
+                <!-- PROJECT TWO -->
+                <a href="greenlight.html" class="card">
+
+                    <div class="card-content">
+						<img src="Images/FutureWorldExhibition.png" alt="Future World Exhibition preview">
+					</div>
+
+                    <div class="card-overlay">
+                        <h3>The Greenlight Project</h3>
+                        <p>Learn More</p>
+                    </div>
+
+                </a>
+
+
+                <!-- PROJECT THREE -->
+                <a href="adana.html" class="card">
+
+                    <div class="card-content">
+					<img src="Images/AdanaComingSoon.png" alt="Adana Project Coming Soon">
+					</div>
+
+                    <div class="card-overlay">
+                        <h3>The Chronicles of Adana</h3>
+                        <p>Learn More</p>
+                    </div>
+
+                </a>
+
+
+                <!-- PROJECT FOUR -->
+                <a href="njnp.html" class="card">
+
+                    <div class="card-content">
+					<img src="Images/NoJusticeNoPeace.png" alt="No Justice, No Peace Poster">
+					</div>
+
+                    <div class="card-overlay">
+                        <h3>No Justice, No Peace</h3>
+                        <p>Learn More</p>
+                    </div>
+
+                </a>
+
+
+                <!-- PROJECT FIVE -->
+                <a href="snitches.html" class="card">
+
+                    <div class="card-content">
+					<img src="Images/SnitchesGetStitches.png" alt="Snitches Gets Stitches">
+					</div>
+
+                    <div class="card-overlay">
+                        <h3>Snitches Get Stitches Animation</h3>
+                        <p>Learn More</p>
+                    </div>
+
+                </a>
+
+
+                <!-- PROJECT SIX -->
+                <a href="a2w.html" class="card">
+
+                    <div class="card-content">
+					<img src="Images/Art2Wear.png" alt="Art2Wear Coming Soon">
+					</div>
+
+                    <div class="card-overlay">
+                        <h3>Art2Wear Production</h3>
+                        <p>Learn More</p>
+                    </div>
+
+                </a>
+
+            </div>
+
+
+            <!-- ==================================
+                 DUPLICATE GROUP FOR INFINITE LOOP
+                 ================================== -->
+
+            <div class="illustration-group" aria-hidden="true">
+
+                <!-- PROJECT ONE - DUPLICATE -->
+                <a href="Hideout.html" class="card" tabindex="-1">
+
+                    <div class="card-content">
+                        <img
+                            src="Images/HideoutPoster.png"
+                            alt=""
+                        >
+                    </div>
+
+                    <div class="card-overlay">
+                        <h3>The Hideout Short Film</h3>
+                        <p>Learn More</p>
+                    </div>
+
+                </a>
+
+
+                <!-- PROJECT TWO - DUPLICATE -->
+                <a href="greenlight.html" class="card" tabindex="-1">
+
+                    <div class="card-content">
+						<img src="Images/FutureWorldExhibition.png" alt="FutureworldExhibition preview">
+					</div>
+
+                    <div class="card-overlay">
+                        <h3>The Greenlight Project</h3>
+                        <p>Learn More</p>
+                    </div>
+
+                </a>
+
+
+                <!-- PROJECT THREE - DUPLICATE -->
+                <a href="adana.html" class="card" tabindex="-1">
+
+                    <div class="card-content">
+					<img src="Images/AdanaComingSoon.png" alt="Adana Coming Soon Poster">
+					</div>
+
+                    <div class="card-overlay">
+                        <h3>The Chronicles of Adana</h3>
+                        <p>Learn More</p>
+                    </div>
+
+                </a>
+
+
+                <!-- PROJECT FOUR - DUPLICATE -->
+                <a href="njnp.html" class="card" tabindex="-1">
+
+                    <div class="card-content">
+					<img src="Images/NoJusticeNoPeace.png" alt="No Justice, No Peace Poster">
+					</div>
+
+                    <div class="card-overlay">
+                        <h3>No Justice, No Peace</h3>
+                        <p>Learn More</p>
+                    </div>
+
+                </a>
+
+
+                <!-- PROJECT FIVE - DUPLICATE -->
+                <a href="snitches.html" class="card" tabindex="-1">
+
+                    <div class="card-content">
+					<img src="Images/SnitchesGetStitches.png" alt="Snitches Gets Stitches">
+					</div>
+
+                    <div class="card-overlay">
+                        <h3>Snitches Get Stitches Animation</h3>
+                        <p>Learn More</p>
+                    </div>
+
+                </a>
+
+
+                <!-- PROJECT SIX - DUPLICATE -->
+                <a href="a2w.html" class="card" tabindex="-1">
+
+                    <div class="card-content">
+					<img src="Images/Art2Wear.png" alt="Art2Wear Coming Soon">
+					</div>
+
+                    <div class="card-overlay">
+                        <h3>Art2Wear Production</h3>
+                        <p>Learn More</p>
+                    </div>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+</main>
+
+<!-- *********** Carousel Ends *************** -->
+
+			
+<! ***********MK Introductions*************** !>
+			
+<img src="Images/rope-line.png" alt="" class="rope-divider">
+		</section>
+		
+<section class="introduction-section">
+
+    <div class="introduction-text">
+
+        <p class="introduction-kicker">HELLO!</p>
+
+        <h2>
+            I’m MK, a storyteller, 3D artist,
+            and designer exploring animation,
+            culture, and immersive media.
+        </h2>
+
+        <p class="introduction-description">
+            My work combines storytelling, 3D animation, design,
+            and technology to create worlds and experiences that
+            connect people through art and narrative.
+        </p>
+
+        <a href="about.html" class="about-button">MORE ABOUT ME</a>
+
+    </div>
+
+
+    <div class="introduction-image-area">
+
+            <img src="Images/Muhammad_Headshot.jpg"
+                 alt="Portrait of MK">
+
+        </div>
+
+</section>
+ <div class="horizontal-line"></div>	
+	</main>
+<! ***********MK Introductions End*************** !>
+	
+</body>
+</html>

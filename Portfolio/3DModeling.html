@@ -1,0 +1,267 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="MK_StyleSheet.css">
+
+<title>Portfolio</title>
+
+</head>
+
+
+<body>
+
+<!-- *********** Navigation Bar Begins *************** -->
+
+<nav>
+    <ul class="nav-links nav-left">
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+        <li>
+            <a href="portfolio.html">Portfolio</a>
+        </li>
+        <li>
+            <a href="projects.html">Projects</a>
+        </li>
+    </ul>
+	
+    <div class="logo">
+        <a href="index.html">
+            <img  src="Images/NavLogo.png" alt="MK Studio Logo">
+        </a>
+    </div>
+
+    <ul class="nav-links nav-right">
+        <li>
+            <a href="about.html">About</a>
+        </li>
+        <li>
+            <a href="terms.html">Terms of Service</a>
+        </li>
+        <li>
+            <a href="contact.html">Contact</a>
+        </li>
+    </ul>
+</nav>
+
+<!-- *********** Navigation Bar Ends *************** -->
+<main>
+    <section>
+        <div class="gallery">
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="3DModeling/Greenlight Environment.png" alt="Greenlight Environment">
+                <div class="gallery-overlay">
+                    <h3>
+                        Apocalypse Shelter (Unreal Engine, Blender)
+                    </h3>
+                </div>
+            </div>
+			
+            <div class="gallery-item" onclick="openModal(this)" data-video="Video/EveryLivingMemory.mp4">
+                <img src="Images/EveryLivingMoment.png" alt="Every Living Memory">
+                <div class="gallery-overlay">
+                    <h3>
+                        Every Living Memory (Blender, Meta Quest)
+                    </h3>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="3DModeling/PatchManor.png" alt="Patch Manor 3D Model">
+                <div class="gallery-overlay">
+                    <h3>
+                        Patch Light Manor
+                    </h3>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openModal(this)">
+
+                <img src="3DModeling/CofeeJelly.png" alt="Coffee Jelly">
+                <div class="gallery-overlay">
+                    <h3>
+                        Coffee Jelly (Blender)
+                    </h3>
+                </div>
+            </div>
+
+		<div class="gallery-item" onclick="openModal(this)">
+
+			<img src="3DModeling/HouseInWoods.png" alt="House In The Woods">
+			<div class="gallery-overlay">
+				<h3>
+					House in the Woods (Blender)
+				</h3>
+			</div>
+		</div>
+			<div class="gallery-item" onclick="openModal(this)">
+
+			<img src="3DModeling/ClockHairdryer.png" alt="Clock & Hair Dryer">
+			<div class="gallery-overlay">
+				<h3>
+					Clock & Hair Dryer (Blender)
+				</h3>
+			</div>
+		</div>
+			<div class="gallery-item" onclick="openModal(this)" data-video="Video/Ruyi_Jin_Shengli.mp4">
+
+			<img src="3DModeling/Staff.png" alt="Rúyì Jīn Shènglì">
+			<div class="gallery-overlay">
+				<h3>
+					Rúyì Jīn Shènglì (Maya, Substance Painter)
+				</h3>
+			</div>
+		</div>
+			<div class="gallery-item" onclick="openModal(this)" data-video="Video/ShelbyCobra_Turnaround.mp4">
+
+			<img src="3DModeling/ShelbyCobra.png" alt="Modified Shelby Cobra">
+			<div class="gallery-overlay">
+				<h3>
+					Modified Shelby Cobra (Maya, Substance Painter)
+				</h3>
+			</div>
+		</div>
+			<div class="gallery-item" onclick="openModal(this)" data-video="Video/ChibiRenderPortfolio.mp4">
+
+			<img src="3DModeling/AgentXChibi.jpg" alt="Agent X Chibi Model">
+			<div class="gallery-overlay">
+				<h3>
+					Agent X Chibi (Maya, XGen, Substance Painter)
+				</h3>
+			</div>
+		</div>
+			<div class="gallery-item" onclick="openModal(this)" data-video="Video/RoomTurnaround.mp4">
+
+			<img src="3DModeling/FutureRoom.jpg" alt="Futuristic Room 3D Model">
+			<div class="gallery-overlay">
+				<h3>
+					Future Room Model (Maya)
+				</h3>
+			</div>
+		</div>
+			<div class="gallery-item" onclick="openModal(this)" data-video="Video/C.H.A.Turnaround.mp4">
+
+			<img src="3DModeling/C.H.A. the Robot.png" alt="C.H.A the Robot">
+			<div class="gallery-overlay">
+				<h3>
+					C.H.A the Robot (Maya)
+				</h3>
+			</div>
+		</div>
+				</div>
+
+
+<!-- =========================================MODAL========================================= -->
+        <div id="image-modal" class="image-modal" onclick="closeModal(event)">
+
+            <!-- CLOSE BUTTON -->
+            <span class="modal-close" onclick="closeModal(event)">
+                &times;
+            </span>
+
+            <!-- IMAGE FOR NORMAL IMAGE PROJECTS -->
+            <img id="expanded-image" class="expanded-image" src="#" alt="">
+
+            <!-- VIDEO FOR EVERY LIVING MEMORY -->
+            <video id="expanded-video" class="expanded-video" controls>
+                <source id="expanded-video-source" src="#" type="video/mp4">
+            </video>
+        </div>
+    </section>
+	
+	<div class="photography-bottom">
+
+        <a href="portfolio.html" class="photo-back-button">
+            &larr; Back to Portfolio
+        </a>
+
+    </div>
+	
+</main>
+
+
+<!-- =========================================JAVASCRIPT ========================================= -->
+
+<script>
+function openModal(item) {
+    const modal =
+        document.getElementById("image-modal");
+    const expandedImage =
+        document.getElementById("expanded-image");
+    const expandedVideo =
+        document.getElementById("expanded-video");
+    const videoSource =
+        document.getElementById("expanded-video-source");
+    const videoPath =
+        item.getAttribute("data-video");
+
+    /* =====================================VIDEO PROJECT===================================== */
+
+    if (videoPath) {
+        expandedImage.style.display = "none";
+        videoSource.src = videoPath;
+        expandedVideo.load();
+        expandedVideo.style.display = "block";
+        expandedVideo.play();
+    }
+
+
+    /* =====================================IMAGE PROJECT===================================== */
+    else {
+        const image = item.querySelector("img");
+        expandedImage.src = image.src;
+        expandedImage.alt = image.alt;
+        expandedImage.style.display = "block";
+        expandedVideo.style.display = "none";
+        expandedVideo.pause();
+    }
+
+    modal.style.display = "flex";
+}
+
+
+/* =========================================
+   CLOSE MODAL
+   ========================================= */
+
+function closeModal(event) {
+    const modal =
+        document.getElementById("image-modal");
+    const expandedVideo =
+        document.getElementById("expanded-video");
+
+    if (
+        event.target === modal ||
+        event.target.classList.contains("modal-close")
+    ) 
+	{
+		expandedVideo.pause();
+        modal.style.display = "none";
+
+    }
+
+}
+
+
+/* =========================================ESC KEY CLOSES MODAL========================================= */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+        if (event.key === "Escape") {
+            const modal =
+                document.getElementById("image-modal");
+            const expandedVideo =
+                document.getElementById("expanded-video");
+            expandedVideo.pause();
+            modal.style.display = "none";
+        }
+
+    }
+);
+
+</script>
+</body>
+</html>
