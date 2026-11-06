@@ -28,67 +28,305 @@
 	</nav>
 <!/* ***********Navigation Bar Ends*************** */!>
 	
-<main>
-		<section>
-			<div class="gallery">
-				<div class="gallery-item" onclick="openModal(this)">
-					<img src="Images/project1.png" alt="Project One">
-					<div class="gallery-overlay">
-						<h3>Project One</h3>
-					</div>
-				</div>
+<!-- *********** PHOTOGRAPHY PAGE BEGINS *********** -->
 
-				<div class="gallery-item" onclick="openModal(this)">
-					<img src="Images/project2.png" alt="Project Two">
-					<div class="gallery-overlay">
-						<h3>Project Two</h3>
-					</div>
-				</div>
+<main class="photography-page">
 
-				<div class="gallery-item" onclick="openModal(this)">
-					<img src="Images/project3.png" alt="Project Three">
-					<div class="gallery-overlay">
-						<h3>Project Three</h3>
-					</div>
-				</div>
+    <section class="photography-intro">
 
-				<div class="gallery-item" onclick="openModal(this)">
-					<img src="Images/project4.png" alt="Project Four">
-					<div class="gallery-overlay">
-						<h3>Project Four</h3>
-					</div>
-				</div>
-			</div>
-			<div id="image-modal" class="image-modal" onclick="closeModal()">
+        <h1 class="section-title">Concept Art & Illustrations</h1>
 
-				<span class="modal-close">&times;</span>
+        <div class="horizontal-line"></div>
 
-				<img id="expanded-image" class="expanded-image" src="#" alt="#">
+    </section>
 
-			</div>
-		</section>
+
+    <!-- *********** PHOTOGRAPHY GALLERY *********** -->
+
+    <section class="photography-gallery" aria-label="Photography gallery">
+
+        <!-- PHOTO 1 -->
+        <button type="button" class="photo-item"
+                aria-label="View photograph 1">
+            <img src="Images/Illustration-ConceptArt/Sunset.jpg"
+                 alt=""
+                 loading="lazy">
+            <span class="photo-overlay">View Photo</span>
+        </button>
+		
+		<!-- PHOTO 14 -->
+        <button type="button" class="photo-item"
+                aria-label="View photograph 14">
+            <img src="Images/Illustration-ConceptArt/Newark(Coraddi).jpg"
+                 alt="A Night Trip To Myeong-Dong"
+                 loading="lazy">
+            <span class="photo-overlay">View Photo</span>
+        </button>
+
+        <!-- PHOTO 2 -->
+        <button type="button" class="photo-item"
+                aria-label="View photograph 2">
+            <img src="Images/Illustration-ConceptArt/Tǔ Xiao Mèng_CharacterTurnaround.png"
+                 alt="Fields of Aso Mountain"
+                 loading="lazy">
+            <span class="photo-overlay">View Photo</span>
+        </button>
+
+        <!-- PHOTO 3 -->
+        <button type="button" class="photo-item"
+                aria-label="View photograph 3">
+            <img src="Images/Illustration-ConceptArt/Rúyì jīn shènglì_PropSheet.png"
+                 alt="In The Rain"
+                 loading="lazy">
+            <span class="photo-overlay">View Photo</span>
+        </button>
+	
+		
+		        <!-- PHOTO 16 -->
+        <button type="button" class="photo-item"
+                aria-label="View photograph 16">
+            <img src="Images/Illustration-ConceptArt/Nari_OfficialTurnaround.jpg"
+                 alt="Cafe Pokpo"
+                 loading="lazy">
+            <span class="photo-overlay">View Photo</span>
+        </button>
+
+        <!-- PHOTO 4 -->
+        <button type="button" class="photo-item"
+                aria-label="View photograph 4">
+            <img src="Images/Illustration-ConceptArt/AgentX_OfficialTurnaround.jpg"
+                 alt="Town Near Aso"
+                 loading="lazy">
+            <span class="photo-overlay">View Photo</span>
+        </button>
+
+        <!-- PHOTO 5 -->
+        <button type="button" class="photo-item"
+                aria-label="View photograph 5">
+            <img src="Images/Illustration-ConceptArt/H&Q Comic CoverOfficial.jpg"
+                 alt="Yusentei Park"
+                 loading="lazy">
+            <span class="photo-overlay">View Photo</span>
+        </button>
+		
+
+        <!-- PHOTO 6 -->
+        <button type="button" class="photo-item"
+                aria-label="View photograph 6">
+            <img src="Images/Illustration-ConceptArt/BanjiSword.jpg"
+                 alt="Rock in Yusentei Park"
+                 loading="lazy">
+            <span class="photo-overlay">View Photo</span>
+        </button>
+
+        <!-- PHOTO 7 -->
+        <button type="button" class="photo-item"
+                aria-label="View photograph 7">
+            <img src="Images/Illustration-ConceptArt/Banji.jpg"
+                 alt="Street photography"
+                 loading="lazy">
+            <span class="photo-overlay">View Photo</span>
+        </button>
+
+        <!-- PHOTO 8 -->
+        <button type="button" class="photo-item"
+                aria-label="View photograph 8">
+            <img src="Images/Illustration-ConceptArt/SamyaMuhammad_WalkTurnaround.png"
+                 alt="Flower at Yonsei university"
+                 loading="lazy">
+            <span class="photo-overlay">View Photo</span>
+		</button>
+
+    </section>
+
+
+    <!-- *********** LIGHTBOX *********** -->
+
+    <div class="photo-lightbox"
+         id="photo-lightbox"
+         role="dialog"
+         aria-modal="true"
+         aria-label="Photograph viewer"
+         aria-hidden="true">
+
+        <button type="button"
+                class="photo-lightbox-close"
+                id="photo-close"
+                aria-label="Close photograph">
+            &times;
+        </button>
+
+        <button type="button"
+                class="photo-lightbox-prev"
+                id="photo-prev"
+                aria-label="Previous photograph">
+            &#10094;
+        </button>
+
+        <div class="photo-lightbox-content">
+            <img id="photo-expanded" src="" alt="">
+            <p id="photo-caption"></p>
+            <p id="photo-counter"></p>
+        </div>
+
+        <button type="button"
+                class="photo-lightbox-next"
+                id="photo-next"
+                aria-label="Next photograph">
+            &#10095;
+        </button>
+
+    </div>
+
+
+    <!-- *********** BACK TO PORTFOLIO *********** -->
+
+    <div class="photography-bottom">
+
+        <a href="portfolio.html" class="photo-back-button">
+            &larr; Back to Portfolio
+        </a>
+
+    </div>
+
 </main>
+
+<!-- *********** PHOTOGRAPHY PAGE ENDS *********** -->
+
+
 <script>
-	function openModal(item) {
+document.addEventListener("DOMContentLoaded", function () {
 
-		const image = item.querySelector("img");
+    const photos = Array.from(
+        document.querySelectorAll(".photo-item")
+    );
 
-		const modal = document.getElementById("image-modal");
+    const lightbox = document.getElementById("photo-lightbox");
+    const expanded = document.getElementById("photo-expanded");
+    const caption = document.getElementById("photo-caption");
+    const counter = document.getElementById("photo-counter");
 
-		const expandedImage = document.getElementById("expanded-image");
+    const closeButton = document.getElementById("photo-close");
+    const prevButton = document.getElementById("photo-prev");
+    const nextButton = document.getElementById("photo-next");
 
-		expandedImage.src = image.src;
-		expandedImage.alt = image.alt;
+    let currentIndex = 0;
+    let lastFocusedElement = null;
 
-		modal.style.display = "flex";
-	}
+    function showPhoto(index) {
 
+        currentIndex = (index + photos.length) % photos.length;
 
-	function closeModal() {
+        const image = photos[currentIndex].querySelector("img");
 
-		document.getElementById("image-modal").style.display = "none";
+        expanded.src = image.src;
+        expanded.alt = image.alt;
 
-	}
+        caption.textContent = image.alt;
+
+        counter.textContent =
+            (currentIndex + 1) + " / " + photos.length;
+    }
+
+    function openPhoto(index) {
+
+        lastFocusedElement = document.activeElement;
+
+        showPhoto(index);
+
+        lightbox.classList.add("active");
+        lightbox.setAttribute("aria-hidden", "false");
+
+        document.body.style.overflow = "hidden";
+
+        closeButton.focus();
+    }
+
+    function closePhoto() {
+
+        lightbox.classList.remove("active");
+        lightbox.setAttribute("aria-hidden", "true");
+
+        document.body.style.overflow = "";
+
+        expanded.removeAttribute("src");
+
+        if (lastFocusedElement) {
+            lastFocusedElement.focus();
+        }
+    }
+
+    photos.forEach(function (photo, index) {
+
+        photo.addEventListener("click", function () {
+            openPhoto(index);
+        });
+
+    });
+
+    closeButton.addEventListener("click", closePhoto);
+
+    prevButton.addEventListener("click", function () {
+        showPhoto(currentIndex - 1);
+    });
+
+    nextButton.addEventListener("click", function () {
+        showPhoto(currentIndex + 1);
+    });
+
+    lightbox.addEventListener("click", function (event) {
+
+        if (event.target === lightbox) {
+            closePhoto();
+        }
+
+    });
+
+    document.addEventListener("keydown", function (event) {
+
+        if (!lightbox.classList.contains("active")) {
+            return;
+        }
+
+        if (event.key === "Escape") {
+            closePhoto();
+        }
+
+        if (event.key === "ArrowLeft") {
+            showPhoto(currentIndex - 1);
+        }
+
+        if (event.key === "ArrowRight") {
+            showPhoto(currentIndex + 1);
+        }
+
+        if (event.key === "Tab") {
+
+            const controls = [
+                closeButton,
+                prevButton,
+                nextButton
+            ];
+
+            const position = controls.indexOf(
+                document.activeElement
+            );
+
+            if (event.shiftKey && position <= 0) {
+                event.preventDefault();
+                nextButton.focus();
+            } else if (!event.shiftKey &&
+                       (position === controls.length - 1 ||
+                        position === -1)) {
+                event.preventDefault();
+                closeButton.focus();
+            }
+        }
+
+    });
+
+});
 </script>
+
 </body>
 </html>
